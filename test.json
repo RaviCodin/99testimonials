@@ -1,0 +1,228 @@
+{
+  "variables": [
+    {
+      "section": "Hero Section",
+      "variables": [
+        {
+          "type": "text",
+          "name": "Title",
+          "value": "Collect, Trust, and Showcase Testimonials Anywhere!"
+        },
+        {
+          "type": "text",
+          "name": "Description",
+          "value": "Effortlessly gather authentic feedback, build trust, and amplify your brand's reputation. Display compelling testimonials across all platforms to captivate your audience.",
+          "rows": 3
+        },
+        { "type": "color", "name": "Title color", "value": "#FFFFFF" },
+        { "type": "color", "name": "Description color", "value": "#FFFFFF" },
+        { "type": "divider" },
+        {
+          "type": "boolean",
+          "name": "Show call to action (CTA)",
+          "value": true
+        },
+        {
+          "type": "text",
+          "name": "CTA title",
+          "value": "Get started",
+          "dependencies": ["Show call to action (CTA)"]
+        },
+        {
+          "type": "text",
+          "name": "CTA url",
+          "value": "https://example.com",
+          "dependencies": ["Show call to action (CTA)"]
+        },
+        {
+          "type": "color",
+          "name": "CTA text color",
+          "value": "#3C32AF",
+          "dependencies": ["Show call to action (CTA)"]
+        },
+        {
+          "type": "color",
+          "name": "CTA button color",
+          "value": "#FFFFFF",
+          "dependencies": ["Show call to action (CTA)"]
+        },
+        {
+          "type": "color",
+          "name": "CTA border color",
+          "value": "#FFFFFF",
+          "dependencies": ["Show call to action (CTA)"]
+        },
+        {
+          "type": "choices",
+          "name": "CTA corner radius",
+          "value": "8px",
+          "choices": ["0px", "2px", "5px", "8px", "10px", "15px", "50px"],
+          "dependencies": ["Show call to action (CTA)"]
+        }
+      ]
+    },
+    {
+      "section": "Design",
+      "variables": [
+        { "type": "font", "name": "Font", "value": "Poppins" },
+        { "type": "color", "name": "Background color 1", "value": "#000000" },
+        { "type": "color", "name": "Background color 2", "value": "#3C32AF" }
+      ]
+    },
+    {
+      "section": "Testimonial card",
+      "variables": [
+        { "type": "boolean", "name": "Show rating", "value": true },
+        { "type": "boolean", "name": "Show date", "value": true },
+        { "type": "boolean", "name": "Show source", "value": true },
+        { "type": "boolean", "name": "Show customer photo", "value": true },
+        { "type": "boolean", "name": "Show images", "value": true },
+        { "type": "boolean", "name": "Show video testimonials", "value": true },
+        { "type": "divider" },
+        {
+          "type": "color",
+          "name": "Card background color",
+          "value": "#1B192B"
+        },
+        { "type": "color", "name": "Card border color", "value": "#1B192B" },
+        { "type": "color", "name": "Card text color", "value": "#FFFFFF" },
+        { "type": "color", "name": "Card title color", "value": "#FFFFFF" },
+        {
+          "type": "color",
+          "name": "Rated star color",
+          "value": "#FFD029",
+          "dependencies": ["Show rating"]
+        },
+        {
+          "type": "color",
+          "name": "Unrated start color",
+          "value": "#FFFFFF",
+          "dependencies": ["Show rating"]
+        },
+        { "type": "text", "name": "Card shadow size", "value": "3" }
+      ]
+    },
+    {
+      "section": "Navigation bar",
+      "variables": [
+        { "type": "boolean", "name": "Show nav bar", "value": true },
+        {
+          "type": "color",
+          "name": "Navbar color",
+          "value": "#1B192B",
+          "dependencies": ["Show nav bar"]
+        },
+        { "type": "divider", "dependencies": ["Show nav bar"] },
+        {
+          "type": "boolean",
+          "name": "Show logo",
+          "value": true,
+          "dependencies": ["Show nav bar"]
+        },
+        {
+          "type": "image",
+          "name": "Company logo",
+          "value": "",
+          "dependencies": ["Show logo", "Show nav bar"]
+        },
+        {
+          "type": "choices",
+          "name": "Logo size",
+          "value": "36px",
+          "choices": ["24px", "36px", "48px", "60px", "80px", "96px"],
+          "dependencies": ["Show logo", "Show nav bar"]
+        },
+        {
+          "type": "text",
+          "name": "Logo url",
+          "value": "https://example.com",
+          "dependencies": ["Show logo", "Show nav bar"]
+        },
+        { "type": "divider", "dependencies": ["Show nav bar"] },
+        {
+          "type": "color",
+          "name": "Link color",
+          "value": "#FFFFFF",
+          "dependencies": ["Show nav bar"]
+        },
+        {
+          "type": "boolean",
+          "name": "Show link 1",
+          "value": true,
+          "dependencies": ["Show nav bar"]
+        },
+        {
+          "type": "text",
+          "name": "Link1 name",
+          "value": "Link1",
+          "dependencies": ["Show link 1", "Show nav bar"]
+        },
+        {
+          "type": "text",
+          "name": "Link1 url",
+          "value": "https://example.com",
+          "dependencies": ["Show link 1", "Show nav bar"]
+        },
+        {
+          "type": "boolean",
+          "name": "Show link 2",
+          "value": true,
+          "dependencies": ["Show nav bar"]
+        },
+        {
+          "type": "text",
+          "name": "Link2 name",
+          "value": "Link2",
+          "dependencies": ["Show link 2", "Show nav bar"]
+        },
+        {
+          "type": "text",
+          "name": "Link2 url",
+          "value": "https://example.com",
+          "dependencies": ["Show link 2", "Show nav bar"]
+        },
+        {
+          "type": "boolean",
+          "name": "Show link 3",
+          "value": true,
+          "dependencies": ["Show nav bar"]
+        },
+        {
+          "type": "text",
+          "name": "Link3 name",
+          "value": "Link3",
+          "dependencies": ["Show link 3", "Show nav bar"]
+        },
+        {
+          "type": "text",
+          "name": "Link3 url",
+          "value": "https://example.com",
+          "dependencies": ["Show link 3", "Show nav bar"]
+        },
+        {
+          "type": "choices",
+          "name": "Menu link position",
+          "value": "Right",
+          "choices": ["Left", "Center", "Right"],
+          "dependencies": ["Show nav bar"]
+        }
+      ]
+    },
+    {
+      "section": "SEO",
+      "variables": [
+        { "type": "text", "name": "SEO title", "value": "Show customer love" },
+        {
+          "type": "text",
+          "name": "Meta description",
+          "value": "Show customer love, gain customers"
+        },
+        {
+          "type": "text",
+          "name": "SEO keywords (comma seperated)",
+          "value": "testimonials, feedback"
+        }
+      ]
+    }
+  ]
+}

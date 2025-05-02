@@ -1,0 +1,110 @@
+[
+  {
+    "model": "payments.pricingplan",
+    "pk": 1,
+    "fields": {
+      "name": "Free",
+      "plan_type": "monthly",
+      "amount": "0.00",
+      "features": "15 text testimonials\r\n1 video testimonial\r\n1-min video recording\r\n1 campaign\r\n1 project\r\n1 seat\r\nUnlimited widgets\r\nUnlimited wall of love\r\nImport as text, video, csv\r\nImport from 6 social media sites\r\nShare via link, social, email, website embed\r\nEmail support",
+      "active": true,
+      "recommended": false,
+      "product_id": "",
+      "testimonials": 1,
+      "video_testimonials": 1,
+      "campaigns": 1,
+      "projects": 1,
+      "staff": 1
+    }
+  },
+  {
+    "model": "payments.pricingplan",
+    "pk": 2,
+    "fields": {
+      "name": "Pro",
+      "plan_type": "monthly",
+      "amount": "12.00",
+      "features": "Everything in free\r\nUnlimited text testimonials\r\n10 video testimonials\r\n2-min video recording\r\n4 campaigns\r\n1 project\r\n2 seats \r\nCustom domains\r\nUse your own branding\r\nVideo export in HD\r\nSearch and tags",
+      "active": true,
+      "recommended": false,
+      "product_id": "pdt_pI6x3R0URMIWYMSowm2VP",
+      "testimonials": 100000,
+      "video_testimonials": 10,
+      "campaigns": 4,
+      "projects": 10,
+      "staff": 2
+    }
+  },
+  {
+    "model": "payments.pricingplan",
+    "pk": 3,
+    "fields": {
+      "name": "Enterprise",
+      "plan_type": "monthly",
+      "amount": "25.00",
+      "features": "Everything in pro\r\nUnlimited video testimonials\r\n5-min video recording\r\nUnlimited campaigns\r\n3 projects ($5/month extra)\r\n5 seats ($5/month extra)\r\nOnboarding assistance",
+      "active": true,
+      "recommended": true,
+      "product_id": "pdt_ZjZQwKYbwFk4v7aOscqRZ",
+      "testimonials": 15,
+      "video_testimonials": 1,
+      "campaigns": 1,
+      "projects": 1,
+      "staff": 1
+    }
+  },
+  {
+    "model": "payments.pricingplan",
+    "pk": 4,
+    "fields": {
+      "name": "Free",
+      "plan_type": "yearly",
+      "amount": "0.00",
+      "features": "15 free testimonials\r\n1 Video Testimonial\r\n1 Free Campaign\r\n1 Project\r\n1 Staff",
+      "active": true,
+      "recommended": false,
+      "product_id": "",
+      "testimonials": 1,
+      "video_testimonials": 1,
+      "campaigns": 1,
+      "projects": 1,
+      "staff": 1
+    }
+  },
+  {
+    "model": "payments.pricingplan",
+    "pk": 5,
+    "fields": {
+      "name": "Pro",
+      "plan_type": "yearly",
+      "amount": "108.00",
+      "features": "Unlimited testimonials\r\n10 Video Testimonial\r\n4 Campaigns\r\n10 Project\r\n2 staff",
+      "active": true,
+      "recommended": false,
+      "product_id": "pdt_TnZuAypNGUN1w2NNiDmRU",
+      "testimonials": 15,
+      "video_testimonials": 1,
+      "campaigns": 1,
+      "projects": 1,
+      "staff": 1
+    }
+  },
+  {
+    "model": "payments.pricingplan",
+    "pk": 6,
+    "fields": {
+      "name": "Enterprise",
+      "plan_type": "yearly",
+      "amount": "240.00",
+      "features": "Unlimited testimonials\r\nUnlimited Video Testimonial\r\nUnlimited Campaigns\r\n3 Project\r\n5 staff",
+      "active": true,
+      "recommended": true,
+      "product_id": "pdt_Mow5nd7lUaCLOc4MeXLa3",
+      "testimonials": 15,
+      "video_testimonials": 1,
+      "campaigns": 1,
+      "projects": 1,
+      "staff": 1
+    }
+  }
+]

@@ -1,0 +1,2877 @@
+[
+  {
+    "model": "displays.template",
+    "pk": 1,
+    "fields": {
+      "type": "wall_of_love",
+      "name": "Wall of love 1",
+      "image": "templates/Wall_of_love_1_1_1.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Hero Section",
+            "variables": [
+              {
+                "type": "text",
+                "name": "Title",
+                "value": "Collect, Trust, and Showcase Testimonials Anywhere!"
+              },
+              {
+                "type": "text",
+                "name": "Description",
+                "value": "Effortlessly gather authentic feedback, build trust, and amplify your brand's reputation. Display compelling testimonials across all platforms to captivate your audience.",
+                "rows": 3
+              },
+              { "type": "color", "name": "Title color", "value": "#FFFFFF" },
+              {
+                "type": "color",
+                "name": "Description color",
+                "value": "#FFFFFF"
+              },
+              { "type": "divider" },
+              {
+                "type": "boolean",
+                "name": "Show call to action (CTA)",
+                "value": true
+              },
+              {
+                "type": "text",
+                "name": "CTA title",
+                "value": "Get started",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "text",
+                "name": "CTA url",
+                "value": "https://example.com",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA text color",
+                "value": "#3C32AF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA button color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA border color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "choices",
+                "name": "CTA corner radius",
+                "value": "8px",
+                "choices": ["0px", "2px", "5px", "8px", "10px", "15px", "50px"],
+                "dependencies": ["Show call to action (CTA)"]
+              }
+            ]
+          },
+          {
+            "section": "Design",
+            "variables": [
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Background color 1",
+                "value": "#FFFFFF"
+              },
+              {
+                "type": "color",
+                "name": "Background color 2",
+                "value": "#3C32AF"
+              }
+            ]
+          },
+          {
+            "section": "Testimonial card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "boolean", "name": "Show images", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show video testimonials",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Card background color",
+                "value": "#FFFFFF"
+              },
+              {
+                "type": "color",
+                "name": "Card border color",
+                "value": "#FFFFFF"
+              },
+              {
+                "type": "color",
+                "name": "Card text color",
+                "value": "#707070"
+              },
+              {
+                "type": "color",
+                "name": "Card title color",
+                "value": "#170F49"
+              },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD700",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated start color",
+                "value": "#D3D3D3",
+                "dependencies": ["Show rating"]
+              },
+              { "type": "text", "name": "Card shadow size", "value": "3" }
+            ]
+          },
+          {
+            "section": "Navigation bar",
+            "variables": [
+              { "type": "boolean", "name": "Show nav bar", "value": true },
+              {
+                "type": "color",
+                "name": "Navbar color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show nav bar"]
+              },
+              { "type": "divider", "dependencies": ["Show nav bar"] },
+              {
+                "type": "boolean",
+                "name": "Show logo",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "image",
+                "name": "Company logo",
+                "value": "",
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              {
+                "type": "choices",
+                "name": "Logo size",
+                "value": "36px",
+                "choices": ["24px", "36px", "48px", "60px", "80px", "96px"],
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Logo url",
+                "value": "https://example.com",
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              { "type": "divider", "dependencies": ["Show nav bar"] },
+              {
+                "type": "color",
+                "name": "Link color",
+                "value": "#707070",
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 1",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link1 name",
+                "value": "Link1",
+                "dependencies": ["Show link 1", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link1 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 1", "Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 2",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link2 name",
+                "value": "Link2",
+                "dependencies": ["Show link 2", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link2 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 2", "Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 3",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link3 name",
+                "value": "Link3",
+                "dependencies": ["Show link 3", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link3 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 3", "Show nav bar"]
+              },
+              {
+                "type": "choices",
+                "name": "Menu link position",
+                "value": "Right",
+                "choices": ["Left", "Center", "Right"],
+                "dependencies": ["Show nav bar"]
+              }
+            ]
+          },
+          {
+            "section": "SEO",
+            "variables": [
+              {
+                "type": "text",
+                "name": "SEO title",
+                "value": "Show customer love"
+              },
+              {
+                "type": "text",
+                "name": "Meta description",
+                "value": "Show customer love, gain customers"
+              },
+              {
+                "type": "text",
+                "name": "SEO keywords (comma seperated)",
+                "value": "testimonials, feedback"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 2,
+    "fields": {
+      "type": "wall_of_love",
+      "name": "Wall of love 2",
+      "image": "templates/Wall_of_love_2.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Hero Section",
+            "variables": [
+              {
+                "type": "text",
+                "name": "Title",
+                "value": "Collect, Trust, and Showcase Testimonials Anywhere!"
+              },
+              {
+                "type": "text",
+                "name": "Description",
+                "value": "Effortlessly gather authentic feedback, build trust, and amplify your brand's reputation. Display compelling testimonials across all platforms to captivate your audience.",
+                "rows": 3
+              },
+              { "type": "color", "name": "Title color", "value": "#FFFFFF" },
+              {
+                "type": "color",
+                "name": "Description color",
+                "value": "#FFFFFF"
+              },
+              { "type": "divider" },
+              {
+                "type": "boolean",
+                "name": "Show call to action (CTA)",
+                "value": true
+              },
+              {
+                "type": "text",
+                "name": "CTA title",
+                "value": "Get started",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "text",
+                "name": "CTA url",
+                "value": "https://example.com",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA text color",
+                "value": "#3C32AF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA button color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA border color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "choices",
+                "name": "CTA corner radius",
+                "value": "8px",
+                "choices": ["0px", "2px", "5px", "8px", "10px", "15px", "50px"],
+                "dependencies": ["Show call to action (CTA)"]
+              }
+            ]
+          },
+          {
+            "section": "Design",
+            "variables": [
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Background color 1",
+                "value": "#000000"
+              },
+              {
+                "type": "color",
+                "name": "Background color 2",
+                "value": "#3C32AF"
+              }
+            ]
+          },
+          {
+            "section": "Testimonial card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "boolean", "name": "Show images", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show video testimonials",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Card background color",
+                "value": "#1B192B"
+              },
+              {
+                "type": "color",
+                "name": "Card border color",
+                "value": "#1B192B"
+              },
+              {
+                "type": "color",
+                "name": "Card text color",
+                "value": "#FFFFFF"
+              },
+              {
+                "type": "color",
+                "name": "Card title color",
+                "value": "#FFFFFF"
+              },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated start color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show rating"]
+              },
+              { "type": "text", "name": "Card shadow size", "value": "3" }
+            ]
+          },
+          {
+            "section": "Navigation bar",
+            "variables": [
+              { "type": "boolean", "name": "Show nav bar", "value": true },
+              {
+                "type": "color",
+                "name": "Navbar color",
+                "value": "#1B192B",
+                "dependencies": ["Show nav bar"]
+              },
+              { "type": "divider", "dependencies": ["Show nav bar"] },
+              {
+                "type": "boolean",
+                "name": "Show logo",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "image",
+                "name": "Company logo",
+                "value": "",
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              {
+                "type": "choices",
+                "name": "Logo size",
+                "value": "36px",
+                "choices": ["24px", "36px", "48px", "60px", "80px", "96px"],
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Logo url",
+                "value": "https://example.com",
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              { "type": "divider", "dependencies": ["Show nav bar"] },
+              {
+                "type": "color",
+                "name": "Link color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 1",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link1 name",
+                "value": "Link1",
+                "dependencies": ["Show link 1", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link1 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 1", "Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 2",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link2 name",
+                "value": "Link2",
+                "dependencies": ["Show link 2", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link2 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 2", "Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 3",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link3 name",
+                "value": "Link3",
+                "dependencies": ["Show link 3", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link3 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 3", "Show nav bar"]
+              },
+              {
+                "type": "choices",
+                "name": "Menu link position",
+                "value": "Right",
+                "choices": ["Left", "Center", "Right"],
+                "dependencies": ["Show nav bar"]
+              }
+            ]
+          },
+          {
+            "section": "SEO",
+            "variables": [
+              {
+                "type": "text",
+                "name": "SEO title",
+                "value": "Show customer love"
+              },
+              {
+                "type": "text",
+                "name": "Meta description",
+                "value": "Show customer love, gain customers"
+              },
+              {
+                "type": "text",
+                "name": "SEO keywords (comma seperated)",
+                "value": "testimonials, feedback"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 3,
+    "fields": {
+      "type": "wall_of_love",
+      "name": "Wall of love 3",
+      "image": "templates/Wall_of_love_3.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Hero Section",
+            "variables": [
+              {
+                "type": "text",
+                "name": "Title",
+                "value": "Collect, Trust, and Showcase Testimonials Anywhere!"
+              },
+              {
+                "type": "text",
+                "name": "Description",
+                "value": "Effortlessly gather authentic feedback, build trust, and amplify your brand's reputation. Display compelling testimonials across all platforms to captivate your audience.",
+                "rows": 3
+              },
+              { "type": "color", "name": "Title color", "value": "#000000" },
+              {
+                "type": "color",
+                "name": "Description color",
+                "value": "#707070"
+              },
+              { "type": "divider" },
+              {
+                "type": "boolean",
+                "name": "Show call to action (CTA)",
+                "value": true
+              },
+              {
+                "type": "text",
+                "name": "CTA title",
+                "value": "Get started",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "text",
+                "name": "CTA url",
+                "value": "https://example.com",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA text color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA button color",
+                "value": "#000000",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA border color",
+                "value": "#000000",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "choices",
+                "name": "CTA corner radius",
+                "value": "8px",
+                "choices": ["0px", "2px", "5px", "8px", "10px", "15px", "50px"],
+                "dependencies": ["Show call to action (CTA)"]
+              }
+            ]
+          },
+          {
+            "section": "Design",
+            "variables": [
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Background color 1",
+                "value": "#C1CBFF"
+              },
+              {
+                "type": "color",
+                "name": "Background color 2",
+                "value": "#FFFFFF"
+              }
+            ]
+          },
+          {
+            "section": "Testimonial card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "boolean", "name": "Show images", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show video testimonials",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Testimonial title color",
+                "value": "#3C32AF"
+              },
+              {
+                "type": "color",
+                "name": "Testimonial subtitle color",
+                "value": "#707070"
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000"
+              },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated start color",
+                "value": "#eff0f6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#707070",
+                "dependencies": ["Show date"]
+              },
+              {
+                "type": "color",
+                "name": "Divider color",
+                "value": "#D9D9D9",
+                "dependencies": []
+              }
+            ]
+          },
+          {
+            "section": "Navigation bar",
+            "variables": [
+              { "type": "boolean", "name": "Show nav bar", "value": true },
+              {
+                "type": "color",
+                "name": "Navbar color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show nav bar"]
+              },
+              { "type": "divider", "dependencies": ["Show nav bar"] },
+              {
+                "type": "boolean",
+                "name": "Show logo",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "image",
+                "name": "Company logo",
+                "value": "",
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              {
+                "type": "choices",
+                "name": "Logo size",
+                "value": "36px",
+                "choices": ["24px", "36px", "48px", "60px", "80px", "96px"],
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Logo url",
+                "value": "https://example.com",
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              { "type": "divider", "dependencies": ["Show nav bar"] },
+              {
+                "type": "color",
+                "name": "Link color",
+                "value": "#707070",
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 1",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link1 name",
+                "value": "Link1",
+                "dependencies": ["Show link 1", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link1 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 1", "Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 2",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link2 name",
+                "value": "Link2",
+                "dependencies": ["Show link 2", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link2 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 2", "Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 3",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link3 name",
+                "value": "Link3",
+                "dependencies": ["Show link 3", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link3 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 3", "Show nav bar"]
+              },
+              {
+                "type": "choices",
+                "name": "Menu link position",
+                "value": "Right",
+                "choices": ["Left", "Center", "Right"],
+                "dependencies": ["Show nav bar"]
+              }
+            ]
+          },
+          {
+            "section": "SEO",
+            "variables": [
+              {
+                "type": "text",
+                "name": "SEO title",
+                "value": "Show customer love"
+              },
+              {
+                "type": "text",
+                "name": "Meta description",
+                "value": "Show customer love, gain customers"
+              },
+              {
+                "type": "text",
+                "name": "SEO keywords (comma seperated)",
+                "value": "testimonials, feedback"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 4,
+    "fields": {
+      "type": "wall_of_love",
+      "name": "Wall of love 4",
+      "image": "templates/Wall_of_love_4.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Hero Section",
+            "variables": [
+              {
+                "type": "text",
+                "name": "Title",
+                "value": "Collect, Trust, and Showcase Testimonials Anywhere!"
+              },
+              {
+                "type": "text",
+                "name": "Description",
+                "value": "Effortlessly gather authentic feedback, build trust, and amplify your brand's reputation. Display compelling testimonials across all platforms to captivate your audience.",
+                "rows": 3
+              },
+              { "type": "color", "name": "Title color", "value": "#5449CC" },
+              {
+                "type": "color",
+                "name": "Description color",
+                "value": "#707070"
+              },
+              { "type": "divider" },
+              {
+                "type": "boolean",
+                "name": "Show call to action (CTA)",
+                "value": true
+              },
+              {
+                "type": "text",
+                "name": "CTA title",
+                "value": "Get started",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "text",
+                "name": "CTA url",
+                "value": "https://example.com",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA text color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA button color",
+                "value": "#5449CC",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA border color",
+                "value": "#5449CC",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "choices",
+                "name": "CTA corner radius",
+                "value": "8px",
+                "choices": ["0px", "2px", "5px", "8px", "10px", "15px", "50px"],
+                "dependencies": ["Show call to action (CTA)"]
+              }
+            ]
+          },
+          {
+            "section": "Design",
+            "variables": [
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Background color 1",
+                "value": "#4c42c3"
+              },
+              {
+                "type": "color",
+                "name": "Background color 2",
+                "value": "#FFFFFF"
+              }
+            ]
+          },
+          {
+            "section": "Testimonial card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "boolean", "name": "Show images", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show video testimonials",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Card background color",
+                "value": "#FFFFFF"
+              },
+              {
+                "type": "color",
+                "name": "Card border color",
+                "value": "#707070"
+              },
+              {
+                "type": "color",
+                "name": "Card title color",
+                "value": "#170F49"
+              },
+              {
+                "type": "color",
+                "name": "Card subtitle color",
+                "value": "#6F6C90"
+              },
+              {
+                "type": "color",
+                "name": "Card text color",
+                "value": "#6F6C90"
+              },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated start color",
+                "value": "#eff0f5",
+                "dependencies": ["Show rating"]
+              },
+              { "type": "text", "name": "Card shadow size", "value": "3" }
+            ]
+          },
+          {
+            "section": "Navigation bar",
+            "variables": [
+              { "type": "boolean", "name": "Show nav bar", "value": true },
+              {
+                "type": "color",
+                "name": "Navbar color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show nav bar"]
+              },
+              { "type": "divider", "dependencies": ["Show nav bar"] },
+              {
+                "type": "boolean",
+                "name": "Show logo",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "image",
+                "name": "Company logo",
+                "value": "",
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              {
+                "type": "choices",
+                "name": "Logo size",
+                "value": "36px",
+                "choices": ["24px", "36px", "48px", "60px", "80px", "96px"],
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Logo url",
+                "value": "https://example.com",
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              { "type": "divider", "dependencies": ["Show nav bar"] },
+              {
+                "type": "color",
+                "name": "Link color",
+                "value": "#707070",
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 1",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link1 name",
+                "value": "Link1",
+                "dependencies": ["Show link 1", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link1 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 1", "Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 2",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link2 name",
+                "value": "Link2",
+                "dependencies": ["Show link 2", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link2 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 2", "Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 3",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link3 name",
+                "value": "Link3",
+                "dependencies": ["Show link 3", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link3 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 3", "Show nav bar"]
+              },
+              {
+                "type": "choices",
+                "name": "Menu link position",
+                "value": "Right",
+                "choices": ["Left", "Center", "Right"],
+                "dependencies": ["Show nav bar"]
+              }
+            ]
+          },
+          {
+            "section": "SEO",
+            "variables": [
+              {
+                "type": "text",
+                "name": "SEO title",
+                "value": "Show customer love"
+              },
+              {
+                "type": "text",
+                "name": "Meta description",
+                "value": "Show customer love, gain customers"
+              },
+              {
+                "type": "text",
+                "name": "SEO keywords (comma seperated)",
+                "value": "testimonials, feedback"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 5,
+    "fields": {
+      "type": "wall_of_love",
+      "name": "Wall of love 5",
+      "image": "templates/Wall_of_love_5.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Hero Section",
+            "variables": [
+              {
+                "type": "text",
+                "name": "Title",
+                "value": "Collect, Trust, and Showcase Testimonials Anywhere!"
+              },
+              {
+                "type": "text",
+                "name": "Description",
+                "value": "Effortlessly gather authentic feedback, build trust, and amplify your brand's reputation. Display compelling testimonials across all platforms to captivate your audience.",
+                "rows": 3
+              },
+              { "type": "color", "name": "Title color", "value": "#FFFFFF" },
+              {
+                "type": "color",
+                "name": "Description color",
+                "value": "#FFFFFF"
+              },
+              { "type": "divider" },
+              {
+                "type": "boolean",
+                "name": "Show call to action (CTA)",
+                "value": true
+              },
+              {
+                "type": "text",
+                "name": "CTA title",
+                "value": "Get started",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "text",
+                "name": "CTA url",
+                "value": "https://example.com",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA text color",
+                "value": "#3C32AF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA button color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA border color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "choices",
+                "name": "CTA corner radius",
+                "value": "0px",
+                "choices": ["0px", "2px", "5px", "8px", "10px", "15px", "50px"],
+                "dependencies": ["Show call to action (CTA)"]
+              }
+            ]
+          },
+          {
+            "section": "Design",
+            "variables": [
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Background color 1",
+                "value": "#3C32AF"
+              },
+              {
+                "type": "color",
+                "name": "Background color 2",
+                "value": "#000000"
+              }
+            ]
+          },
+          {
+            "section": "Testimonial card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show testimonial images",
+                "value": true
+              },
+              {
+                "type": "boolean",
+                "name": "Show testimonial videos",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Card background 1",
+                "value": "#ECFFDE"
+              },
+              {
+                "type": "color",
+                "name": "Card background 2",
+                "value": "#DEF2FF"
+              },
+              {
+                "type": "color",
+                "name": "Card background 3",
+                "value": "#D5D5D5"
+              },
+              {
+                "type": "color",
+                "name": "Card background 4",
+                "value": "#FFFFFF"
+              },
+              {
+                "type": "color",
+                "name": "Testimonial color",
+                "value": "#6F6C90"
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#000000"
+              },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated start color",
+                "value": "#707070",
+                "dependencies": ["Show rating"]
+              }
+            ]
+          },
+          {
+            "section": "Navigation bar",
+            "variables": [
+              { "type": "boolean", "name": "Show nav bar", "value": true },
+              {
+                "type": "color",
+                "name": "Navbar color",
+                "value": "#1B192B",
+                "dependencies": ["Show nav bar"]
+              },
+              { "type": "divider", "dependencies": ["Show nav bar"] },
+              {
+                "type": "boolean",
+                "name": "Show logo",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "image",
+                "name": "Company logo",
+                "value": "",
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              {
+                "type": "choices",
+                "name": "Logo size",
+                "value": "36px",
+                "choices": ["24px", "36px", "48px", "60px", "80px", "96px"],
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Logo url",
+                "value": "https://example.com",
+                "dependencies": ["Show logo", "Show nav bar"]
+              },
+              { "type": "divider", "dependencies": ["Show nav bar"] },
+              {
+                "type": "color",
+                "name": "Link color",
+                "value": "#FFFFFF",
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 1",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link1 name",
+                "value": "Link1",
+                "dependencies": ["Show link 1", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link1 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 1", "Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 2",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link2 name",
+                "value": "Link2",
+                "dependencies": ["Show link 2", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link2 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 2", "Show nav bar"]
+              },
+              {
+                "type": "boolean",
+                "name": "Show link 3",
+                "value": true,
+                "dependencies": ["Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link3 name",
+                "value": "Link3",
+                "dependencies": ["Show link 3", "Show nav bar"]
+              },
+              {
+                "type": "text",
+                "name": "Link3 url",
+                "value": "https://example.com",
+                "dependencies": ["Show link 3", "Show nav bar"]
+              },
+              {
+                "type": "choices",
+                "name": "Menu link position",
+                "value": "Right",
+                "choices": ["Left", "Center", "Right"],
+                "dependencies": ["Show nav bar"]
+              }
+            ]
+          },
+          {
+            "section": "SEO",
+            "variables": [
+              {
+                "type": "text",
+                "name": "SEO title",
+                "value": "Show customer love"
+              },
+              {
+                "type": "text",
+                "name": "Meta description",
+                "value": "Show customer love, gain customers"
+              },
+              {
+                "type": "text",
+                "name": "SEO keywords (comma seperated)",
+                "value": "testimonials, feedback"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 6,
+    "fields": {
+      "type": "pop_ups",
+      "name": "Pop-up 1",
+      "image": "templates/Pop-up_11.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Design",
+            "variables": [
+              { "type": "color", "name": "Primary color", "value": "#453bba" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              { "type": "boolean", "name": "Show rating", "value": true },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated start color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              { "type": "divider" },
+              {
+                "type": "boolean",
+                "name": "Show call to action (CTA)",
+                "value": true
+              },
+              {
+                "type": "text",
+                "name": "CTA title",
+                "value": "Get started",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "text",
+                "name": "CTA url",
+                "value": "https://example.com",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA text color",
+                "value": "#ffffff",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA button color",
+                "value": "#3C32AF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA border color",
+                "value": "#3C32AF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "choices",
+                "name": "CTA corner radius",
+                "value": "8px",
+                "choices": ["0px", "2px", "5px", "8px", "10px", "15px", "50%"],
+                "dependencies": ["Show call to action (CTA)"]
+              }
+            ]
+          },
+          {
+            "section": "Layout",
+            "variables": [
+              { "type": "boolean", "name": "Overlay", "value": true },
+              {
+                "type": "color",
+                "name": "Overlay color",
+                "value": "#000000",
+                "dependencies": ["Overlay"]
+              },
+              {
+                "type": "choices",
+                "name": "Position",
+                "value": "center",
+                "choices": ["top", "center", "corner"],
+                "dependencies": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 7,
+    "fields": {
+      "type": "pop_ups",
+      "name": "Pop-up 2",
+      "image": "templates/Pop-up_22.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Design",
+            "variables": [
+              { "type": "color", "name": "Primary color", "value": "#453bba" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              { "type": "boolean", "name": "Show rating", "value": true },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated start color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              { "type": "divider" },
+              {
+                "type": "boolean",
+                "name": "Show call to action (CTA)",
+                "value": true
+              },
+              {
+                "type": "text",
+                "name": "CTA title",
+                "value": "Get started",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "text",
+                "name": "CTA url",
+                "value": "https://example.com",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA text color",
+                "value": "#ffffff",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA button color",
+                "value": "#3C32AF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "color",
+                "name": "CTA border color",
+                "value": "#3C32AF",
+                "dependencies": ["Show call to action (CTA)"]
+              },
+              {
+                "type": "choices",
+                "name": "CTA corner radius",
+                "value": "8px",
+                "choices": ["0px", "2px", "5px", "8px", "10px", "15px", "50%"],
+                "dependencies": ["Show call to action (CTA)"]
+              }
+            ]
+          },
+          {
+            "section": "Layout",
+            "variables": [
+              { "type": "boolean", "name": "Overlay", "value": true },
+              {
+                "type": "color",
+                "name": "Overlay color",
+                "value": "#000000",
+                "dependencies": ["Overlay"]
+              },
+              {
+                "type": "choices",
+                "name": "Position",
+                "value": "center",
+                "choices": ["top", "center", "corner"],
+                "dependencies": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 8,
+    "fields": {
+      "type": "widgets",
+      "name": "Widget 1",
+      "image": "templates/Widget_1_-_original.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "boolean", "name": "Show images", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show video testimonials",
+                "value": true
+              },
+              { "type": "divider" },
+              { "type": "color", "name": "Primary color", "value": "#453bba" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#707070",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 9,
+    "fields": {
+      "type": "widgets",
+      "name": "Widget 2",
+      "image": "templates/Widget_21.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "boolean", "name": "Show images", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show video testimonials",
+                "value": true
+              },
+              { "type": "divider" },
+              { "type": "color", "name": "Primary color", "value": "#453bba" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              { "type": "color", "name": "Card color", "value": "#ffffff" },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#707070",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 10,
+    "fields": {
+      "type": "widgets",
+      "name": "Widget 4",
+      "image": "templates/Widget_41.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "boolean", "name": "Show images", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show video testimonials",
+                "value": true
+              },
+              { "type": "divider" },
+              { "type": "color", "name": "Primary color", "value": "#453bba" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#CBDCE9"
+              },
+              {
+                "type": "color",
+                "name": "Gradient color1",
+                "value": "#3eaeb1"
+              },
+              {
+                "type": "color",
+                "name": "Gradient color2",
+                "value": "#4ba0c5"
+              },
+              {
+                "type": "color",
+                "name": "Card Background",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#707070",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 11,
+    "fields": {
+      "type": "widgets",
+      "name": "Widget 6",
+      "image": "templates/Widget_6.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              {
+                "type": "text",
+                "name": "Title",
+                "value": "Trusted by 1000+ users"
+              },
+              { "type": "divider" },
+              { "type": "color", "name": "Primary color", "value": "#453bba" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Text color",
+                "value": "#000000",
+                "dependencies": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 12,
+    "fields": {
+      "type": "widgets",
+      "name": "Widget 7",
+      "image": "templates/Widget_7.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              {
+                "type": "text",
+                "name": "Title",
+                "value": "Trusted by our beloved clients"
+              },
+              { "type": "divider" },
+              { "type": "color", "name": "Primary color", "value": "#453bba" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 13,
+    "fields": {
+      "type": "widgets",
+      "name": "Widget 10",
+      "image": "templates/Widget_10_-_without_watermark.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "boolean", "name": "Show images", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show video testimonials",
+                "value": true
+              },
+              { "type": "divider" },
+              { "type": "color", "name": "Primary color", "value": "#453bba" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              {
+                "type": "color",
+                "name": "Card Background color",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#707070",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 14,
+    "fields": {
+      "type": "widgets",
+      "name": "Widget 11",
+      "image": "templates/Widget_111.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "boolean", "name": "Show images", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show video testimonials",
+                "value": true
+              },
+              { "type": "divider" },
+              { "type": "color", "name": "Primary color", "value": "#453bba" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              {
+                "type": "color",
+                "name": "Card background color",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#707070",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 15,
+    "fields": {
+      "type": "widgets",
+      "name": "Widget 8",
+      "image": "templates/Widget_82.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "boolean", "name": "Show images", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show video testimonials",
+                "value": true
+              },
+              { "type": "divider" },
+              { "type": "color", "name": "Primary color", "value": "#453bba" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              {
+                "type": "color",
+                "name": "Card background color",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#707070",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 16,
+    "fields": {
+      "type": "images",
+      "name": "Image 2",
+      "image": "templates/Image_2.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Gradient color 1",
+                "value": "#7116bf"
+              },
+              {
+                "type": "color",
+                "name": "Gradient color 2",
+                "value": "#5b35d1"
+              },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#707070",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#707070",
+                "dependencies": ["Show date"]
+              },
+              {
+                "type": "color",
+                "name": "Border color",
+                "value": "#b4388c",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 17,
+    "fields": {
+      "type": "images",
+      "name": "Image 4",
+      "image": "templates/Image_4.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#453ab9"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#ffffff",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#ffffff",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#ffffff",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#ccc",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 18,
+    "fields": {
+      "type": "images",
+      "name": "Image 8",
+      "image": "templates/Image_8.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "divider" },
+              { "type": "color", "name": "Primary color", "value": "#453ab9" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#000000",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 19,
+    "fields": {
+      "type": "images",
+      "name": "Image 7",
+      "image": "templates/Image_7_-_Story.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "divider" },
+              { "type": "color", "name": "Primary color", "value": "#453ab9" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#000000",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 20,
+    "fields": {
+      "type": "images",
+      "name": "Image 3",
+      "image": "templates/Image_3.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Background color 1",
+                "value": "#453ab9"
+              },
+              {
+                "type": "color",
+                "name": "Background color 2",
+                "value": "#ffffff"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#ffffff",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name background",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#707070",
+                "dependencies": ["Show date"]
+              },
+              {
+                "type": "color",
+                "name": "Decoration color",
+                "value": "#FFD029"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 21,
+    "fields": {
+      "type": "images",
+      "name": "Image 9",
+      "image": "templates/Image_9_-_Story.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Background color 1",
+                "value": "#ffffff"
+              },
+              {
+                "type": "color",
+                "name": "Background color 2",
+                "value": "#453ab9"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#453ab9",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#453ab9",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#453ab9",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 22,
+    "fields": {
+      "type": "images",
+      "name": "Image 6",
+      "image": "templates/Image_6.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#FFCF2B"
+              },
+              {
+                "type": "text",
+                "name": "Title",
+                "value": "What our customers are saying"
+              },
+              { "type": "color", "name": "Title color", "value": "#ffffff" },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#707070",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 23,
+    "fields": {
+      "type": "images",
+      "name": "Image 5",
+      "image": "templates/Image_5.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Background color",
+                "value": "#212327"
+              },
+              {
+                "type": "text",
+                "name": "Title",
+                "value": "What our customers are saying"
+              },
+              { "type": "color", "name": "Title color", "value": "#ffffff" },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#ffffff",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#ffffff",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#707070",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 24,
+    "fields": {
+      "type": "video_embeds",
+      "name": "Video Embed 1",
+      "image": "templates/Preview_-_single.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Background color 1",
+                "value": "#ffffff"
+              },
+              {
+                "type": "color",
+                "name": "Background color 2",
+                "value": "#453ab9"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#453ab9",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#453ab9",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#453ab9",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "model": "displays.template",
+    "pk": 25,
+    "fields": {
+      "type": "video_embeds",
+      "name": "Video Embed 2 (Multiple)",
+      "image": "templates/Preview_-_Multiple.png",
+      "variables": {
+        "variables": [
+          {
+            "section": "Testimonial Card",
+            "variables": [
+              { "type": "boolean", "name": "Show rating", "value": true },
+              { "type": "boolean", "name": "Show date", "value": true },
+              { "type": "boolean", "name": "Show source", "value": true },
+              {
+                "type": "boolean",
+                "name": "Show customer photo",
+                "value": true
+              },
+              { "type": "divider" },
+              {
+                "type": "color",
+                "name": "Background color 1",
+                "value": "#ffffff"
+              },
+              {
+                "type": "color",
+                "name": "Background color 2",
+                "value": "#453ab9"
+              },
+              { "type": "font", "name": "Font", "value": "Poppins" },
+              {
+                "type": "color",
+                "name": "Rated star color",
+                "value": "#FFD029",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Unrated star color",
+                "value": "#EFF0F6",
+                "dependencies": ["Show rating"]
+              },
+              {
+                "type": "color",
+                "name": "Testimonial text color",
+                "value": "#000000",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer name color",
+                "value": "#453ab9",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Customer tagline color",
+                "value": "#453ab9",
+                "dependencies": []
+              },
+              {
+                "type": "color",
+                "name": "Date color",
+                "value": "#453ab9",
+                "dependencies": ["Show date"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]
