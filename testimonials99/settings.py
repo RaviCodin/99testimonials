@@ -21,8 +21,8 @@ if env_loaded:
     BASE_URL = os.getenv("BASE_URL")
     # print(BASE_URL)
 else:
-    # BASE_URL = "https://app.99testimonials.com"
-    BASE_URL = "http://127.0.0.1:8000"
+    # BASE_URL = "http://127.0.0.1:8000"
+    BASE_URL = "https://app.99testimonials.com"
     # print(BASE_URL)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -79,6 +79,7 @@ INSTALLED_APPS = [
     "payments",
     "landing_pages",
     "displays",
+    "django_extensions",
 ]
 
 MIDDLEWARE = [
@@ -265,3 +266,8 @@ JWT_AUTH_REFRESH_COOKIE = "refresh"
 
 DEFAULT_PAYMENT_PLAN_ID = 1
 MAIN_DOMAIN = "app.99testimonials.com"
+
+
+# Live payment Key - ravig
+# product id : pdt_FyLfCR0yvrU3wQaU7akad
+# API KEY : s6uSVD6ekHM1rn8N.-fjr7Y-sHt3DX7YSle-_RzX5yR6tnuT4s0TRvz9lsuCZZO1w

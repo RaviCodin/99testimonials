@@ -30,6 +30,7 @@ BASE_URL = settings.BASE_URL
 
 class UserEmailLoginView(APIView):
     permission_classes = [permissions.AllowAny]  # Allow unauthenticated access
+    print("Login")
 
     def post(self, request, *args, **kwargs):
         email = request.data.get("email")
@@ -44,6 +45,7 @@ class UserEmailLoginView(APIView):
         try:
             user = User.objects.get(username=email)
         except User.DoesNotExist:
+            print("Invalid email or password")
             return Response(
                 {"error": "Invalid email or password."},
                 status=status.HTTP_400_BAD_REQUEST,
@@ -83,7 +85,7 @@ class UserRegistrationView(generics.CreateAPIView):
             gender="M",
             country="Unknown",
             phone="",
-            # pricing_plan=PricingPlan.objects.get(id=DEFAULT_PAYMENT_PLAN_ID),
+            pricing_plan=PricingPlan.objects.get(id=DEFAULT_PAYMENT_PLAN_ID),
             # pricing_plan=PricingPlan.objects.get(name="Free Plan"),
         )
 
