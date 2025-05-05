@@ -274,6 +274,6 @@ DEFAULT_PAYMENT_PLAN_ID = 1
 MAIN_DOMAIN = "app.99testimonials.com"
 
 
-# Live payment Key - ravig
+# Live payment Key - ravi
 # product id : pdt_FyLfCR0yvrU3wQaU7akad
 # API KEY : s6uSVD6ekHM1rn8N.-fjr7Y-sHt3DX7YSle-_RzX5yR6tnuT4s0TRvz9lsuCZZO1w
