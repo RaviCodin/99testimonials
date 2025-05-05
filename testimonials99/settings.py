@@ -242,7 +242,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 DODO_PAYMENTS_API_KEY = (
-    "P+cWW2uAdHgDAYO9.gbhoA87u6uEfgVzSisY8i1rBH1CXA2Rq0dLEIuxIJIOPavH2"
+    # test
+    # "P+cWW2uAdHgDAYO9.gbhoA87u6uEfgVzSisY8i1rBH1CXA2Rq0dLEIuxIJIOPavH2"
+    "1lj0qifUcMQ0oCCM.tfYnqGfpubTX4q4sizapfj9RIfw_IgbugIe2tcXy6D6c1Gsb"
+    # live
+    # "s6uSVD6ekHM1rn8N.-fjr7Y-sHt3DX7YSle-_RzX5yR6tnuT4s0TRvz9lsuCZZO1w"
 )
 
 
@@ -252,6 +256,8 @@ CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://app.99testimonials.com/",
+    "https://app.99testimonials.com",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://localhost:8000",  # Add your static file server URL if different

@@ -23,8 +23,11 @@ def subscribe(request):
         return Response({"error": "Product ID is required"}, status=400)
 
     client = DodoPayments(
-        bearer_token=settings.DODO_PAYMENTS_API_KEY, environment="test_mode"
+        # bearer_token=settings.DODO_PAYMENTS_API_KEY, environment="test_mode"
+        bearer_token="P+cWW2uAdHgDAYO9.gbhoA87u6uEfgVzSisY8i1rBH1CXA2Rq0dLEIuxIJIOPavH2",
+        environment="test_mode",
     )
+
     subscription = client.subscriptions.create(
         billing={
             "city": "city",

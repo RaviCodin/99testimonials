@@ -17,3 +17,5 @@ dj_rest_auth
 jwt
 twikit
 dnspython
+praw
+django-extensions
