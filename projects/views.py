@@ -11,7 +11,13 @@ from rest_framework.exceptions import PermissionDenied
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Project, BrandLogo, BrandColor, BrandFont
-from .serializers import ProjectSerializer, ImageSerializer, BrandLogoSerializer, BrandColorSerializer, BrandFontSerializer
+from .serializers import (
+    ProjectSerializer,
+    ImageSerializer,
+    BrandLogoSerializer,
+    BrandColorSerializer,
+    BrandFontSerializer,
+)
 from accounts.serializers import UserDetailsSerializer
 from rest_framework import status
 from rest_framework import viewsets
@@ -34,7 +40,9 @@ class ProjectListCreateView(generics.ListCreateAPIView):
     serializer_class = ProjectSerializer
 
     def get_queryset(self):
-        return Project.objects.filter(owner=self.request.user) | Project.objects.filter(collaborators=self.request.user)
+        return Project.objects.filter(owner=self.request.user) | Project.objects.filter(
+            collaborators=self.request.user
+        )
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
@@ -47,14 +55,12 @@ class ProjectRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 
     def perform_update(self, serializer):
         if self.get_object().owner != self.request.user:
-            raise PermissionDenied(
-                "You do not have permission to edit this project.")
+            raise PermissionDenied("You do not have permission to edit this project.")
         serializer.save()
 
     def perform_destroy(self, instance):
         if instance.owner != self.request.user:
-            raise PermissionDenied(
-                "You do not have permission to delete this project.")
+            raise PermissionDenied("You do not have permission to delete this project.")
         instance.delete()
 
 
@@ -67,73 +73,98 @@ class ManageCollaboratorView(APIView):
     def post(self, request, pk, action):
         project = Project.objects.get(pk=pk)
 
-        # Check if the user is the owner or a collaborator
-        if project.owner != request.user and request.user not in project.collaborators.all():
-            raise PermissionDenied(
-                "You do not have permission to modify collaborators for this project.")
+        print("projectSS", project)
 
-        email = request.data.get('email')
+        # Check if the user is the owner or a collaborator
+        if (
+            project.owner != request.user
+            and request.user not in project.collaborators.all()
+        ):
+            raise PermissionDenied(
+                "You do not have permission to modify collaborators for this project."
+            )
+
+        email = request.data.get("email")
         if not email:
-            return Response({"detail": "Email is required."}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(
+                {"detail": "Email is required."}, status=status.HTTP_400_BAD_REQUEST
+            )
 
         User = get_user_model()
         try:
             user = User.objects.get(username=email)
 
             # send email to setup the account
-            mail_subject = f"Invitation to collaborate on {project.name}"
+            mail_subject = f"Invitation to collaborate on {project}"
             token = default_token_generator.make_token(user)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
             current_site = get_current_site(request)
-            html_message = render_to_string('accounts/collab_invite_email.html', {
-                'user': user,
-                'domain': BASE_URL,
-                'owner': request.user.first_name + " "+request.user.first_name,
-                'project': project.name,
-            })
+            html_message = render_to_string(
+                "accounts/collab_invite_email.html",
+                {
+                    "user": user,
+                    "domain": BASE_URL,
+                    "owner": request.user.first_name,
+                    "project": project,
+                },
+            )
             plain_message = strip_tags(html_message)
-            result = send_mail(mail_subject, plain_message, 'noreply@99testimonials.com',
-                               [email], html_message=html_message)
+            result = send_mail(
+                mail_subject,
+                plain_message,
+                "noreply@99testimonials.com",
+                [email],
+                html_message=html_message,
+            )
 
         except User.DoesNotExist:
             # Create a new user if the user does not exist
             user = User.objects.create_user(username=email)
             UserDetails.objects.create(
                 user=user,
-                gender='M',
-                country='Unknown',
-                phone='',
-                pricing_plan=PricingPlan.objects.get(
-                    id=DEFAULT_PAYMENT_PLAN_ID)
+                gender="M",
+                country="Unknown",
+                phone="",
+                pricing_plan=PricingPlan.objects.get(id=DEFAULT_PAYMENT_PLAN_ID),
             )
 
             # send email to setup the account
-            mail_subject = f"Invitation to collaborate on {project.name}"
+            mail_subject = f"Invitation to collaborate on {project}"
             token = default_token_generator.make_token(user)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
             current_site = get_current_site(request)
-            html_message = render_to_string('accounts/collab_invite_email.html', {
-                'user': user,
-                'domain': BASE_URL,
-                'uid': uid,
-                'token': token,
-                'owner': request.user.first_name + " "+request.user.first_name,
-                'project': project.name,
-            })
+            html_message = render_to_string(
+                "accounts/collab_invite_email.html",
+                {
+                    "user": user,
+                    "domain": BASE_URL,
+                    "uid": uid,
+                    "token": token,
+                    "owner": request.user.first_name + " " + request.user.first_name,
+                    "project": project,
+                },
+            )
             plain_message = strip_tags(html_message)
-            result = send_mail(mail_subject, plain_message, 'noreply@99testimonials.com',
-                               [email], html_message=html_message)
+            result = send_mail(
+                mail_subject,
+                plain_message,
+                "noreply@99testimonials.com",
+                [email],
+                html_message=html_message,
+            )
 
-        if action == 'add':
+        if action == "add":
             project.collaborators.add(user)
             # Send email
 
             return Response({"detail": "Collaborator added."})
-        elif action == 'remove':
+        elif action == "remove":
             project.collaborators.remove(user)
             return Response({"detail": "Collaborator removed."})
         else:
-            return Response({"detail": "Invalid action."}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(
+                {"detail": "Invalid action."}, status=status.HTTP_400_BAD_REQUEST
+            )
 
     def get(self, request, pk, action):
         project = Project.objects.get(pk=pk)
@@ -141,8 +172,14 @@ class ManageCollaboratorView(APIView):
         collaborators = project.collaborators.all()
         owner_serializer = UserDetailsSerializer(owner.details)
         collaborators_serializer = UserDetailsSerializer(
-            [user.details for user in collaborators], many=True)
-        return Response({"owner": owner_serializer.data, "collaborators": collaborators_serializer.data})
+            [user.details for user in collaborators], many=True
+        )
+        return Response(
+            {
+                "owner": owner_serializer.data,
+                "collaborators": collaborators_serializer.data,
+            }
+        )
 
 
 class ImageUploadView(APIView):
@@ -153,10 +190,13 @@ class ImageUploadView(APIView):
         file_serializer = ImageSerializer(data=request.data)
         if file_serializer.is_valid():
             file_serializer.save()
-            return Response({
-                "uuid": file_serializer.data['id'],
-                "url": file_serializer.data['image']
-            }, status=status.HTTP_201_CREATED)
+            return Response(
+                {
+                    "uuid": file_serializer.data["id"],
+                    "url": file_serializer.data["image"],
+                },
+                status=status.HTTP_201_CREATED,
+            )
         else:
             return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -167,9 +207,9 @@ class BrandLogoViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        if getattr(self, 'swagger_fake_view', False):
+        if getattr(self, "swagger_fake_view", False):
             return BrandLogo.objects.none()
-        project_id = self.request.query_params.get('project_id')
+        project_id = self.request.query_params.get("project_id")
         if not project_id:
             raise KeyError("project_id is required as a query parameter.")
         return BrandLogo.objects.filter(project_id=project_id)
@@ -190,9 +230,9 @@ class BrandColorViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        if getattr(self, 'swagger_fake_view', False):
+        if getattr(self, "swagger_fake_view", False):
             return BrandColor.objects.none()
-        project_id = self.request.query_params.get('project_id')
+        project_id = self.request.query_params.get("project_id")
         if not project_id:
             raise KeyError("project_id is required as a query parameter.")
         return BrandColor.objects.filter(project_id=project_id)
@@ -213,9 +253,9 @@ class BrandFontViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        if getattr(self, 'swagger_fake_view', False):
+        if getattr(self, "swagger_fake_view", False):
             return BrandFont.objects.none()
-        project_id = self.request.query_params.get('project_id')
+        project_id = self.request.query_params.get("project_id")
         if not project_id:
             raise KeyError("project_id is required as a query parameter.")
         return BrandFont.objects.filter(project_id=project_id)

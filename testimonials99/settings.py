@@ -204,8 +204,8 @@ SOCIALACCOUNT_PROVIDERS = {
             "access_type": "online",
         },
         "APP": {
-            "client_id": "433828432142-9737k18j95histlao40juiqcdh4u8afr.apps.googleusercontent.com",
-            "secret": "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",
+            "client_id": "817486202475-76rt589p0h2q4jvt69rrkjiq4c454e2v.apps.googleusercontent.com",
+            "secret": "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",
         },
     }
 }
@@ -272,6 +272,10 @@ JWT_AUTH_REFRESH_COOKIE = "refresh"
 
 DEFAULT_PAYMENT_PLAN_ID = 1
 MAIN_DOMAIN = "app.99testimonials.com"
+
+
+CLIENT_ID = "817486202475-76rt589p0h2q4jvt69rrkjiq4c454e2v.apps.googleusercontent.com"
+CLIENT_SECRET = "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"
 
 
 # Live payment Key - ravi

@@ -45,8 +45,8 @@ def subscribe(request):
         product_id=product_id,
         quantity=1,
         payment_link=True,
-        # return_url="https://app.99testimonials.com/payment/verify/",
-        return_url="http://localhost:5173/payment/verify/",
+        return_url="https://app.99testimonials.com/payment/verify/",
+        # return_url="http://localhost:5173/payment/verify/",
     )
     transaction = Transaction.objects.create(
         user=request.user,
