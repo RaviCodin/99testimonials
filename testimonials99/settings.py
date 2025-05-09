@@ -274,6 +274,10 @@ DEFAULT_PAYMENT_PLAN_ID = 1
 MAIN_DOMAIN = "app.99testimonials.com"
 
 
+CLIENT_ID = "817486202475-76rt589p0h2q4jvt69rrkjiq4c454e2v.apps.googleusercontent.com"
+CLIENT_SECRET = "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"
+
+
 # Live payment Key - ravi
 # product id : pdt_FyLfCR0yvrU3wQaU7akad
 # API KEY : s6uSVD6ekHM1rn8N.-fjr7Y-sHt3DX7YSle-_RzX5yR6tnuT4s0TRvz9lsuCZZO1w

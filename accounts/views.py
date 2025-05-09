@@ -26,6 +26,8 @@ from django.conf import settings
 
 DEFAULT_PAYMENT_PLAN_ID = settings.DEFAULT_PAYMENT_PLAN_ID
 BASE_URL = settings.BASE_URL
+CLIENT_ID = settings.CLIENT_ID
+CLIENT_SECRET = settings.CLIENT_SECRET
 
 
 class UserEmailLoginView(APIView):
@@ -238,9 +240,10 @@ class GoogleLoginView(generics.GenericAPIView):
             token_url = "https://oauth2.googleapis.com/token"
             token_data = {
                 "code": code,
-                "client_id": "817486202475-76rt589p0h2q4jvt69rrkjiq4c454e2v.apps.googleusercontent.com",
-                "client_secret": "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",
+                "client_id": CLIENT_ID,
+                "client_secret": CLIENT_SECRET,
                 "redirect_uri": "https://app.99testimonials.com",
+                # "redirect_uri": "http://localhost:5173",
                 "grant_type": "authorization_code",
             }
             token_response = requests.post(token_url, data=token_data)
