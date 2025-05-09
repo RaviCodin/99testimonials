@@ -242,8 +242,8 @@ class GoogleLoginView(generics.GenericAPIView):
                 "code": code,
                 "client_id": CLIENT_ID,
                 "client_secret": CLIENT_SECRET,
-                "redirect_uri": "https://app.99testimonials.com",
-                # "redirect_uri": "http://localhost:5173",
+                # "redirect_uri": "https://app.99testimonials.com",
+                "redirect_uri": "http://localhost:5173",
                 "grant_type": "authorization_code",
             }
             token_response = requests.post(token_url, data=token_data)
