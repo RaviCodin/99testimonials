@@ -25,7 +25,7 @@ def subscribe(request):
     print("DODO PAYMENTS")
     client = DodoPayments(
         # bearer_token=settings.DODO_PAYMENTS_API_KEY, environment="test_mode"
-        bearer_token="P+cWW2uAdHgDAYO9.gbhoA87u6uEfgVzSisY8i1rBH1CXA2Rq0dLEIuxIJIOPavH2",
+        api_key="P+cWW2uAdHgDAYO9.gbhoA87u6uEfgVzSisY8i1rBH1CXA2Rq0dLEIuxIJIOPavH2",
         environment="test_mode",
     )
     print("DODO PAYMENTS Ok")
@@ -45,7 +45,8 @@ def subscribe(request):
         product_id=product_id,
         quantity=1,
         payment_link=True,
-        return_url="https://app.99testimonials.com/payment/verify/",
+        # return_url="https://app.99testimonials.com/payment/verify/",
+        return_url="http://localhost:5173/payment/verify/",
     )
     transaction = Transaction.objects.create(
         user=request.user,
@@ -69,7 +70,7 @@ def verify_subscription_status(request, subscription_id):
         return Response({"error": "Subscription ID is required"}, status=400)
 
     client = DodoPayments(
-        bearer_token=settings.DODO_PAYMENTS_API_KEY, environment="test_mode"
+        api_key=settings.DODO_PAYMENTS_API_KEY, environment="test_mode"
     )
     try:
         subscription = client.subscriptions.retrieve(subscription_id)

@@ -238,14 +238,14 @@ class GoogleLoginView(generics.GenericAPIView):
             token_url = "https://oauth2.googleapis.com/token"
             token_data = {
                 "code": code,
-                "client_id": "433828432142-9737k18j95histlao40juiqcdh4u8afr.apps.googleusercontent.com",
-                "client_secret": "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",
-                "redirect_uri": "http://localhost:5173",
+                "client_id": "817486202475-76rt589p0h2q4jvt69rrkjiq4c454e2v.apps.googleusercontent.com",
+                "client_secret": "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",
+                "redirect_uri": "https://app.99testimonials.com",
                 "grant_type": "authorization_code",
             }
             token_response = requests.post(token_url, data=token_data)
             token_response_data = token_response.json()
-            print(token_response_data)
+            print("token_response_data", token_response_data)
 
             if "id_token" not in token_response_data:
                 return Response(
