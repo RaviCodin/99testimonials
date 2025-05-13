@@ -24,9 +24,7 @@ def subscribe(request):
 
     print("DODO PAYMENTS")
     client = DodoPayments(
-        # bearer_token=settings.DODO_PAYMENTS_API_KEY, environment="test_mode"
-        api_key="P+cWW2uAdHgDAYO9.gbhoA87u6uEfgVzSisY8i1rBH1CXA2Rq0dLEIuxIJIOPavH2",
-        environment="test_mode",
+        api_key=settings.DODO_PAYMENTS_API_KEY, environment="live_mode"
     )
     print("DODO PAYMENTS Ok")
 
@@ -70,7 +68,7 @@ def verify_subscription_status(request, subscription_id):
         return Response({"error": "Subscription ID is required"}, status=400)
 
     client = DodoPayments(
-        api_key=settings.DODO_PAYMENTS_API_KEY, environment="test_mode"
+        api_key=settings.DODO_PAYMENTS_API_KEY, environment="live_mode"
     )
     try:
         subscription = client.subscriptions.retrieve(subscription_id)
