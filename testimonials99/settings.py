@@ -244,9 +244,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 DODO_PAYMENTS_API_KEY = (
     # test
     # "P+cWW2uAdHgDAYO9.gbhoA87u6uEfgVzSisY8i1rBH1CXA2Rq0dLEIuxIJIOPavH2"
-    "1lj0qifUcMQ0oCCM.tfYnqGfpubTX4q4sizapfj9RIfw_IgbugIe2tcXy6D6c1Gsb"
+    # "1lj0qifUcMQ0oCCM.tfYnqGfpubTX4q4sizapfj9RIfw_IgbugIe2tcXy6D6c1Gsb"
     # live
-    # "s6uSVD6ekHM1rn8N.-fjr7Y-sHt3DX7YSle-_RzX5yR6tnuT4s0TRvz9lsuCZZO1w"
+    "s6uSVD6ekHM1rn8N.-fjr7Y-sHt3DX7YSle-_RzX5yR6tnuT4s0TRvz9lsuCZZO1w"
 )
 
 
